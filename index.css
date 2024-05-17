@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "TTLakesBold";
+  src: url(./resources/fonts/TTLakes-Bold.ttf);
+}
+
+@font-face {
+  font-family: "TTLakesMedium";
+  src: url(./resources/fonts/TTLakes-Medium.ttf);
+}
+
+@font-face {
+  font-family: "TTLakesRegular";
+  src: url(./resources/fonts/TTLakes-Regular.ttf);
+}
+
+@font-face {
+  font-family: "TTLakesThin";
+  src: url(./resources/fonts/TTLakes-Thin.ttf);
+}
+body{
+  margin: 0;
+  background-color: #F8F8F8;
+}
+
+.service-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  height: 88px;
+  border-bottom: 1px solid #D9FFF5;
+  background-color: #FFF;
+  padding: 0 5%;
+}
+
+.service-header img{
+  max-height: 50px;
+  margin: auto 0;
+}
+
+.service-main {
+  padding-top: 24px;
+  width: 100%;
+}
+
+.service-main__title{
+  font-family: "TTLakesBold", sans-serif;
+  font-size: 28px;
+  height: 40px; 
+  margin: 0;
+  margin-left: 5%;
+}
+
+.service-main__flex-container{
+  margin-bottom: 24px;
+}
+
+.service-main__title::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: #41F6D7;
+  height: 40px;
+  width: 4px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.service-main__nav{
+  display: flex;
+  overflow-x: auto;
+  white-space:nowrap;
+}
+
+.service-main__nav > :nth-child(1){
+  margin-left: 5%;
+}
+
+.service-main__button{
+  font-family: "TTLakesMedium", sans-serif;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #7E7E82;
+  padding: 0 16px;
+}
+
+.service-main__button_active{
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  height: 40px;
+}
+
+.service-info__text{
+  font-family: "TTLakesRegular", sans-serif;
+  color: #1B1C21;
+  font-size: 14px;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.service-info__read-next{
+  display: flex;
+  align-items: center;
+  color: #1B1C21;
+  height: 24px;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.service-info__read-next::before{
+  content: '';
+  margin-left: 5%;
+  margin-right: 8px;
+  display: inline-block;
+  background-image: url('./resources/expand.svg');
+  height: 24px;
+  width: 24px;
+}
+
+.service-info__image{
+  width: 100%;
+}
+
+
+/*MOBILE Ver*/
+@media (max-width: 767px){
+  .mobile-hidden{
+    display: none;
+  }
+}
+
+/*TABLET Ver*/
+@media (min-width: 768px) and (max-width: 1128px){
+  .tablet-hidden{
+    display: none;
+  }
+}
+@media (min-width: 768px){
+  .service-header .logo {
+    margin-right: 32.55%;
+  }
+  .service-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 93.7%;
+  }
+
+  .service-info__image{
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    margin-left: 6.25%;
+  }
+  
+  .service-info__text {
+    margin: 0;
+  }
+
+  .service-info__read-next::before{
+    margin-left: 0;
+  }
+}
+
+/*DESKTOP Ver*/
+@media (min-width: 1120px) {
+  .service-header{
+    display: none;
+  }
+
+  .service-main{
+    padding-top: 42px;
+  }
+
+  .service-main__flex-container{
+    display: flex;
+    align-items: center;
+    margin-right: 9.37%;
+  }
+
+  .service-main__flex-container span {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+    color: #1B1C21;
+    font-family: "TTLakesMedium";
+  }
+
+  
+
+  .service-main__flex-container :nth-child(2)::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -48px;
+    background-image: url(./resources/repair.svg);
+    height: 40px;
+    width: 40px;
+  }
+
+  .service-main__flex-container :nth-child(3)::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -48px;
+    background-image: url(./resources/checkstatus.svg);
+    height: 40px;
+    width: 40px;
+  }
+
+  .service-main__flex-container :nth-child(2){
+    margin-left: auto;
+    margin-right: 7.136%;
+  }
+
+  .service-info__image{
+    height: 307px;
+    width: 531px;
+  }
+
+  .service-main__title::before{
+    left: 0;
+  }
+
+  .service-info__text{
+    width: 50%;
+  }
+}
