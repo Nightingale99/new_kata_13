@@ -17,6 +17,24 @@
   font-family: "TTLakesThin";
   src: url(./resources/fonts/TTLakes-Thin.ttf);
 }
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+a,button{
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover,button:hover{
+  transform: scale(1.1);
+  color:#41F6D7;
+  transition: 0.3s;
+}
+
 body{
   margin: 0;
   background-color: #F8F8F8;
@@ -68,13 +86,12 @@ body{
 
 .service-main__nav{
   display: flex;
+  margin-left: 5%;
+  align-items: center;
   overflow-x: auto;
   white-space:nowrap;
 }
 
-.service-main__nav > :nth-child(1){
-  margin-left: 5%;
-}
 
 .service-main__button{
   font-family: "TTLakesMedium", sans-serif;
@@ -83,13 +100,22 @@ body{
   background: transparent;
   color: #7E7E82;
   padding: 0 16px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .service-main__button_active{
   border: 2px solid #B8FFEC;
   border-radius: 6px;
   background-color: #FFFFFF;
-  height: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.service-main__button_active:hover{
+  color: #7E7E82;
+  transform: scale(1);
+  cursor: default;
 }
 
 .service-info__text{
@@ -97,11 +123,11 @@ body{
   color: #1B1C21;
   font-size: 14px;
   margin-left: 5%;
-  width: 90%;
 }
 
 .service-info__read-next{
   display: flex;
+  width: 200px;
   align-items: center;
   color: #1B1C21;
   height: 24px;
@@ -173,6 +199,11 @@ body{
     display: none;
   }
 
+  .service-main__nav{
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+
   .service-main{
     padding-top: 42px;
   }
@@ -183,7 +214,7 @@ body{
     margin-right: 9.37%;
   }
 
-  .service-main__flex-container span {
+  .service-main__flex-container button {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -226,9 +257,5 @@ body{
 
   .service-main__title::before{
     left: 0;
-  }
-
-  .service-info__text{
-    width: 50%;
   }
 }
