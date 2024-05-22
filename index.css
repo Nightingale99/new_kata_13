@@ -23,13 +23,13 @@ button{
   border: none;
 }
 
-a,button{
+.service-header__button, .service-main__button, .service-info__read-next{
   transition: 0.3s;
   cursor: pointer;
   text-decoration: none;
 }
 
-a:hover,button:hover{
+.service-header__button:hover, .service-main__button:hover, .service-info__read-next:hover{
   transform: scale(1.1);
   color:#41F6D7;
   transition: 0.3s;
@@ -50,7 +50,7 @@ body{
   padding: 0 5%;
 }
 
-.service-header img{
+.service-header__button, .service-header__divider{
   max-height: 50px;
   margin: auto 0;
 }
@@ -196,7 +196,29 @@ body{
 /*DESKTOP Ver*/
 @media (min-width: 1120px) {
   .service-header{
-    display: none;
+    visibility: hidden;
+    position: relative;
+    height: 0;
+  }
+
+  .service-header__button_desktop{
+    visibility:visible;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: #1B1C21;
+    font-family: "TTLakesMedium";
+    font-size: 16px;
+    right: 5%;
+    top: 32px;
+  }
+
+  .service-header__button_label{
+    margin-right: 8px;
+  }
+
+  .service-header__button_desktop:nth-child(9){
+    right: calc(5% + 200px);
   }
 
   .service-main__nav{
@@ -214,41 +236,7 @@ body{
     margin-right: 9.37%;
   }
 
-  .service-main__flex-container button {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    position: relative;
-    color: #1B1C21;
-    font-family: "TTLakesMedium";
-  }
-
   
-
-  .service-main__flex-container :nth-child(2)::before{
-    content: '';
-    display: block;
-    position: absolute;
-    right: -48px;
-    background-image: url(./resources/repair.svg);
-    height: 40px;
-    width: 40px;
-  }
-
-  .service-main__flex-container :nth-child(3)::before{
-    content: '';
-    display: block;
-    position: absolute;
-    right: -48px;
-    background-image: url(./resources/checkstatus.svg);
-    height: 40px;
-    width: 40px;
-  }
-
-  .service-main__flex-container :nth-child(2){
-    margin-left: auto;
-    margin-right: 7.136%;
-  }
 
   .service-info__image{
     height: 307px;

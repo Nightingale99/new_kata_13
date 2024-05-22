@@ -9,28 +9,22 @@
 </head>
 <body>
   <header class="service-header">
-    <button><img src="./resources/menu.svg" alt="menu"></button>
-    <img class="mobile-hidden" src="./resources/divider.svg" alt="divider">
-    <button><img class="logo" src="./resources/CPS.svg" alt="CPS"></button>
-    <img class="tablet-hidden" src="./resources/divider.svg" alt="divider">
-    <button><img class="mobile-hidden" src="./resources/call.svg" alt="call"></button>
-    <button><img class="mobile-hidden" src="./resources/chat.svg" alt="chat"></button>
-    <button><img class="mobile-hidden" src="./resources/profile.svg" alt="profile"></button>
-    <img class="mobile-hidden" src="./resources/divider.svg" alt="divider">
-    <button><img src="./resources/repair.svg" alt="repair"></button>
-    <button><img src="./resources/checkstatus.svg" alt="checkstatus"></button>
+    <button class="service-header__button"><img src="./resources/menu.svg" alt="menu"></button>
+    <img class="mobile-hidden service-header__divider" src="./resources/divider.svg" alt="divider">
+    <button class="service-header__button"><img class="logo" src="./resources/CPS.svg" alt="CPS"></button>
+    <img class="tablet-hidden service-header__divider" src="./resources/divider.svg" alt="divider">
+    <button class="service-header__button"><img class="mobile-hidden" src="./resources/call.svg" alt="call"></button>
+    <button class="service-header__button"><img class="mobile-hidden" src="./resources/chat.svg" alt="chat"></button>
+    <button class="service-header__button"><img class="mobile-hidden" src="./resources/profile.svg" alt="profile"></button>
+    <img class="mobile-hidden service-header__divider" src="./resources/divider.svg" alt="divider">
+    <button class="service-header__button service-header__button_desktop"><span class="mobile-hidden tablet-hidden service-header__button_label">Оставить заявку</span><img src="./resources/repair.svg" alt="repair"></button>
+    <button class="service-header__button service-header__button_desktop"><span class="mobile-hidden tablet-hidden service-header__button_label">Статус ремонта</span><img src="./resources/checkstatus.svg" alt="checkstatus"></button>
   </header>
-  <main class="service-main">
+  <main class="service-main"> 
     <div class="service-main__flex-container">
       <h1 class="service-main__title">
         Услуги и сервисы
       </h1>
-      <button class="tablet-hidden mobile-hidden">
-        Оставить заявку
-      </button>
-      <button class="tablet-hidden mobile-hidden">
-        Статус ремонта
-      </button>
     </div>
     <nav class="service-main__nav">
       <a href="#" class="service-main__button service-main__button_active">Ремонтируемые устройства</a>
