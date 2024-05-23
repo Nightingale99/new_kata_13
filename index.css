@@ -204,6 +204,11 @@ body{
     visibility: hidden;
     position: relative;
     height: 0;
+    transition: 0;
+  }
+
+  .service-header__button:not(.service-header__button_desktop) img {
+    visibility: hidden;
   }
 
   .service-header__button_desktop{
@@ -216,6 +221,7 @@ body{
     font-size: 16px;
     right: 5%;
     top: 42px;
+    transition: 0.3s;
   }
 
   .service-header__button_label{
